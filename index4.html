@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gói dịch vụ</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="./js.js"></script>
+    <style>
+        body {
+            background: url('./picture/');
+        }
+        
+        .header a {
+            float: right;
+            text-decoration: none;
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-right: 30px;
+        }
+        
+        .header a:hover {
+            color: red;
+        }
+        
+        .header img {
+            margin-left: 30px;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .bar {
+            font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+            margin-left: 60px;
+        }
+        
+        .bar p {
+            color: red;
+            font-size: 20px;
+        }
+        
+        .plan {
+            float: right;
+            margin-right: 10%;
+        }
+        
+        .plan button {
+            padding: 0px 55px;
+            background: #e50914;
+            border-radius: 2px;
+            border: 1px solid #e50914;
+            height: 100px;
+            width: 190px;
+            color: #fff;
+            font-size: 25px;
+        }
+        
+        .content {
+            margin-top: 12%;
+        }
+        
+        .table-box {
+            margin: 50px auto;
+        }
+        
+        .table-row {
+            display: table;
+            width: 80%;
+            margin: 10px auto;
+            font-family: sans-serif;
+            background: transparent;
+            padding: 12px 0;
+            color: #555;
+            font-size: 13px;
+            box-shadow: 0 1px 4px 0px rgba(0, 0, 50, 0.3);
+        }
+        
+        .table-cell {
+            display: table-cell;
+            width: 20%;
+            text-align: center;
+            padding: 4px 0;
+            border-right: 1px solid #d6d4d4;
+            vertical-align: middle;
+        }
+        
+        .first-cell {
+            text-align: left;
+            padding-left: 20px;
+        }
+        
+        .last-cell {
+            border-right: none;
+        }
+        
+        .table-cell p {
+            font-weight: bold;
+            font-size: 20px;
+        }
+        
+        .next button {
+            background: red;
+            border: 1px solid red;
+            height: 80px;
+            width: 330px;
+            margin-left: 35%;
+            border-radius: 10px;
+        }
+        
+        .next button a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .footer {
+            margin-top: 10%;
+            background: rgb(172, 171, 171);
+        }
+        
+        .end-footer {
+            display: flex;
+        }
+        
+        .end-footer a {
+            text-decoration: none;
+            color: #555;
+        }
+        
+        .end-footer p {
+            padding: 0px 25px;
+        }
+        
+        .end-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer h3 {
+            color: #555;
+        }
+        
+        .ori {
+            text-align: center;
+        }
+        
+        hr {
+            margin-left: 50px;
+        }
+        
+        .ori h4 i {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="./picture/Netflix-Logo-700x394.png">
+        <a href="./index2.html">Home</a>
+    </div>
+
+    <div class="bar">
+        <h1>Chọn các gói dịch vụ của bạn</h1>
+        <p>-> Xem tất cả những gì bạn muốn. Không có quảng cáo. <br> -> Các đề xuất dành cho bạn<br> -> Thay đổi hoặc hủy các gói của bạn bất cứ lúc nào.</p>
+    </div>
+    <div class="plan">
+        <button onClick="doimau()">Mobile</button>
+        <button onclick="doimau2()">Basic</button>
+        <button> Standard</button>
+        <button>Premium</button>
+    </div>
+    <div class="content">
+        <div class="table-box">
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p>Monthly price</p>
+                </div>
+                <div class="table-cell" id="title">
+                    <p>70,000 ₫</p>
+                </div>
+                <div class="table-cell" id="middle">
+                    <p>108,000 ₫</p>
+                </div>
+                <div class="table-cell">
+                    <p>220,000 ₫</p>
+                </div>
+                <div class="table-cell">
+                    <p>260,000 ₫</p>
+                </div>
+            </div>
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p>Video quality</p>
+                </div>
+                <div class="table-cell" id="title2">
+                    <p>Good</p>
+                </div>
+                <div class="table-cell" id="middle2">
+                    <p>Good</p>
+                </div>
+                <div class="table-cell">
+                    <p>Better</p>
+                </div>
+                <div class="table-cell">
+                    <p>Best</p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p>Resolution</p>
+                </div>
+                <div class="table-cell" id="title3">
+                    <p>480p</p>
+                </div>
+                <div class="table-cell" id="middle3">
+                    <p>720p</p>
+                </div>
+                <div class="table-cell">
+                    <p>1080p</p>
+                </div>
+                <div class="table-cell">
+                    <p>4K+HDR </p>
+                </div>
+            </div>
+
+            <div class="table-row">
+                <div class="table-cell first-cell">
+                    <p>Devices you can use to watch</p>
+                </div>
+                <div class="table-cell" id="title4">
+                    <p><i class='bx bx-mobile-alt' style="font-size: 30px"></i><br> Phone
+                        <br>
+                        <i class='bx bx-mobile' style="font-size: 30px"></i><br> Tablet
+                    </p>
+                </div>
+                <div class="table-cell" id="middle4">
+                    <p><i class='bx bx-mobile-alt' style="font-size: 30px"></i><br> Phone
+                        <br>
+                        <i class='bx bx-mobile' style="font-size: 30px"></i><br> Tablet
+                        <br> <i class='bx bx-tv' style="font-size: 30px"></i><br>TV</p>
+                </div>
+                <div class="table-cell">
+                    <p><i class='bx bx-mobile-alt' style="font-size: 30px"></i><br> Phone
+                        <br>
+                        <i class='bx bx-mobile' style="font-size: 30px"></i><br> Tablet
+                        <br> <i class='bx bx-tv' style="font-size: 30px"></i><br>TV</p>
+                </div>
+                <div class="table-cell">
+                    <p><i class='bx bx-mobile-alt' style="font-size: 30px"></i><br> Phone
+                        <br>
+                        <i class='bx bx-mobile' style="font-size: 30px"></i><br> Tablet
+                        <br> <i class='bx bx-tv' style="font-size: 30px"></i><br>TV</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="next">
+        <button><a href="./login.html">Next</a></button>
+    </div>
+    <div class="footer"><br>
+        <h3>Bạn có câu hỏi? Liên hệ với chúng tôi </h3>
+        <div class="end-footer">
+            <p><a href="">Câu hỏi thường gặp</a></p>
+            <p><a href="">Trung tâm trợ giúp</a></p>
+            <p><a href="">Cửa hàng T.Anh Stu</a></p>
+            <p><a href="">Điều khoản sử dụng</a></p>
+        </div>
+        <div class="end-footer">
+            <p><a href="">Quyền riêng tư</a></p>
+            <p><a href="">Tùy chọn</a></p>
+            <p><a href="">Thông tin web</a></p>
+        </div>
+        <hr width="90%" color="white"><br><br>
+        <div class="ori">
+            <h4>Bản quyền thuộc về<i> Thu Anh</i> | Cung cấp bởi <i>THUANH</i> </h4>
+            <i class='bx bx-copyright'>Copyright by THUANH</i>
+            <p>Do not reup</p>
+        </div>
+    </div>
+</body>
+
+</html>
